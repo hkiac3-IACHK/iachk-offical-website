@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="香港國際仲裁院 (IAC.HK) 提供專業的跨境爭議解決服務，融匯國際仲裁標準，服務大灣區 (GBA) 及一帶一路 (BRI) 國家戰略。">
+    <title>香港國際仲裁院 | Hong Kong International Arbitration Court (IAC.HK)</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F172A', /* 深藏青 - 權威穩重 */
+                        accent: '#1E40AF',  /* 專業靛藍 - 現代活力 */
+                        gold: '#D4AF37',    /* 低調金 - 高端品質 */
+                        light: '#F8FAFC',   /* 極淺灰 - 舒適背景 */
+                        dark: '#0B1120'     /* 深邃黑 - 頁腳沉穩 */
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        
+        /* 嚴謹直角滾動條，拒絕圓角 */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 0; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 0; }
+        ::-webkit-scrollbar-thumb:hover { background: #1E40AF; }
+
+        /* 現代商務網格線背景 (直角/直線體現) */
+        .bg-grid-lines {
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        /* 標題左側時尚垂直金線 */
+        .title-line-left {
+            position: relative;
+            padding-left: 24px;
+        }
+        .title-line-left::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 4px;
+            bottom: 4px;
+            width: 4px;
+            background-color: #D4AF37;
+        }
+
+        /* 時尚方正卡片懸停效果 (向上平移 + 底部金線) */
+        .sharp-hover {
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        .sharp-hover:hover {
+            border-bottom-color: #D4AF37;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px -10px rgba(15, 23, 42, 0.15);
+        }
+
+        /* 直角金屬質感分割線 */
+        .section-separator {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(15,23,42,0.05), rgba(212,175,55,0.4), rgba(15,23,42,0.05));
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-light pt-24">
+
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50 border-b-[3px] border-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                
+                <a href="#" class="flex-shrink-0 flex items-center h-full py-2 mr-4">
+                    <img src="iac-logo.jpg" alt="IAC.HK Logo" class="h-full max-h-20 w-auto object-contain">
+                </a>
+                
+                <div class="hidden lg:flex space-x-2 xl:space-x-6 items-center h-full">
+                    <a href="#about" class="group text-primary font-bold tracking-wide h-full flex flex-col justify-center items-center border-b-[3px] border-transparent hover:border-accent px-2 transition-all">
+                        <span class="group-hover:text-accent transition-colors text-[15px]">關於我們</span>
+                        <span class="text-[0.6rem] text-gray-400 font-normal uppercase tracking-[0.15em] mt-0.5 group-hover:text-accent transition-colors">About Us</span>
+                    </a>
+                    <a href="#philosophy" class="group text-primary font-bold tracking-wide h-full flex flex-col justify-center items-center border-b-[3px] border-transparent hover:border-accent px-2 transition-all">
+                        <span class="group-hover:text-accent transition-colors text-[15px]">宗旨理念</span>
+                        <span class="text-[0.6rem] text-gray-400 font-normal uppercase tracking-[0.15em] mt-0.5 group-hover:text-accent transition-colors">Philosophy</span>
+                    </a>
+                    <a href="#advantages" class="group text-primary font-bold tracking-wide h-full flex flex-col justify-center items-center border-b-[3px] border-transparent hover:border-accent px-2 transition-all">
+                        <span class="group-hover:text-accent transition-colors text-[15px]">核心優勢</span>
+                        <span class="text-[0.6rem] text-gray-400 font-normal uppercase tracking-[0.15em] mt-0.5 group-hover:text-accent transition-colors">Advantages</span>
+                    </a>
+                    <a href="#rules" class="group text-primary font-bold tracking-wide h-full flex flex-col justify-center items-center border-b-[3px] border-transparent hover:border-accent px-2 transition-all">
+                        <span class="group-hover:text-accent transition-colors text-[15px]">仲裁規則</span>
+                        <span class="text-[0.6rem] text-gray-400 font-normal uppercase tracking-[0.15em] mt-0.5 group-hover:text-accent transition-colors">Arbitration Rules</span>
+                    </a>
+                    <a href="#roster" class="group text-primary font-bold tracking-wide h-full flex flex-col justify-center items-center border-b-[3px] border-transparent hover:border-accent px-2 transition-all">
+                        <span class="group-hover:text-accent transition-colors text-[15px]">仲裁名冊</span>
+                        <span class="text-[0.6rem] text-gray-400 font-normal uppercase tracking-[0.15em] mt-0.5 group-hover:text-accent transition-colors">Panel of Arbitrators</span>
+                    </a>
+                    <a href="#news" class="group text-primary font-bold tracking-wide h-full flex flex-col justify-center items-center border-b-[3px] border-transparent hover:border-accent px-2 transition-all">
+                        <span class="group-hover:text-accent transition-colors text-[15px]">新聞動態</span>
+                        <span class="text-[0.6rem] text-gray-400 font-normal uppercase tracking-[0.15em] mt-0.5 group-hover:text-accent transition-colors">News & Events</span>
+                    </a>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-4 xl:space-x-6 ml-2">
+                    <button class="text-sm font-bold text-gray-600 hover:text-primary transition-colors flex-shrink-0">EN | 繁</button>
+                    <a href="#online" class="bg-primary hover:bg-accent text-white px-5 py-3 text-sm font-bold tracking-wide transition-colors flex items-center gap-2 whitespace-nowrap rounded-none">
+                        <i class="fa-solid fa-laptop-code"></i> 在線立案
+                    </a>
+                </div>
+
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-primary p-2 text-2xl focus:outline-none">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-2xl">
+            <div class="px-0 py-2">
+                <a href="#about" class="block px-6 py-4 font-bold text-primary border-l-4 border-transparent hover:border-accent hover:bg-gray-50 border-b border-gray-50">
+                    關於我們 <span class="block text-[0.65rem] font-normal text-gray-400 uppercase tracking-widest mt-1">About Us</span>
+                </a>
+                <a href="#philosophy" class="block px-6 py-4 font-bold text-primary border-l-4 border-transparent hover:border-accent hover:bg-gray-50 border-b border-gray-50">
+                    宗旨理念 <span class="block text-[0.65rem] font-normal text-gray-400 uppercase tracking-widest mt-1">Philosophy</span>
+                </a>
+                <a href="#advantages" class="block px-6 py-4 font-bold text-primary border-l-4 border-transparent hover:border-accent hover:bg-gray-50 border-b border-gray-50">
+                    核心優勢 <span class="block text-[0.65rem] font-normal text-gray-400 uppercase tracking-widest mt-1">Advantages</span>
+                </a>
+                <a href="#rules" class="block px-6 py-4 font-bold text-primary border-l-4 border-transparent hover:border-accent hover:bg-gray-50 border-b border-gray-50">
+                    仲裁規則 <span class="block text-[0.65rem] font-normal text-gray-400 uppercase tracking-widest mt-1">Arbitration Rules</span>
+                </a>
+                <a href="#roster" class="block px-6 py-4 font-bold text-primary border-l-4 border-transparent hover:border-accent hover:bg-gray-50 border-b border-gray-50">
+                    仲裁名冊 <span class="block text-[0.65rem] font-normal text-gray-400 uppercase tracking-widest mt-1">Panel of Arbitrators</span>
+                </a>
+                <a href="#news" class="block px-6 py-4 font-bold text-primary border-l-4 border-transparent hover:border-accent hover:bg-gray-50 border-b border-gray-50">
+                    新聞動態 <span class="block text-[0.65rem] font-normal text-gray-400 uppercase tracking-widest mt-1">News & Events</span>
+                </a>
+                <div class="p-6 bg-gray-50">
+                    <a href="#online" class="block text-center bg-primary hover:bg-accent text-white px-4 py-4 font-bold rounded-none transition-colors">在線立案 E-Filing</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-24 pb-28 lg:pt-36 lg:pb-40 bg-primary overflow-hidden bg-grid-lines">
+        <div class="absolute top-0 right-0 w-[45%] h-full bg-accent/20 transform -skew-x-[20deg] translate-x-20 border-l-[2px] border-gold/30 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-gold/50 via-gold/10 to-transparent"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl z-10 relative">
+                
+                <div class="mb-6">
+                    <span class="inline-block px-4 py-2 bg-gold text-primary font-bold text-xs tracking-[0.2em] uppercase rounded-none shadow-sm">
+                        Hong Kong International Arbitration Court
+                    </span>
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-5 leading-[1.2] tracking-wide border-l-[6px] border-gold pl-6">
+                    融匯國際仲裁標準.<br>服務GBA&BRI國家戰略
+                </h1>
+                
+                <h2 class="text-xl md:text-3xl text-gold font-serif italic tracking-wide mb-8 pl-8 flex items-center">
+                    <div class="w-8 h-[2px] bg-gold mr-4"></div>
+                    您的跨境爭議解決首選
+                </h2>
+
+                <p class="text-gray-300 text-sm md:text-base font-light tracking-[0.15em] uppercase mb-10 pl-8 opacity-80 border-b border-white/20 pb-6 inline-block">
+                    Integrating International Arbitration Standards<br>
+                    Serving GBA & BRI National Strategies
+                </p>
+
+                <p class="text-lg md:text-xl text-gray-200 leading-relaxed font-light pl-8 max-w-3xl mb-12">
+                    依託香港普通法優勢，香港國際仲裁院（IAC.HK）為全球及中國當事人提供友善、嚴謹、國際化的跨境爭議解決服務。
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-5 pl-8">
+                    <a href="#philosophy" class="bg-gold hover:bg-white text-primary px-8 py-4 font-bold transition-colors text-lg flex items-center justify-center gap-3 rounded-none">
+                        了解核心理念 <i class="fa-solid fa-arrow-right-long"></i>
+                    </a>
+                    <a href="#rules" class="bg-transparent border border-white/40 hover:border-gold hover:bg-white/5 text-white hover:text-gold px-8 py-4 font-bold transition-all text-lg flex items-center justify-center gap-3 rounded-none">
+                        查閱仲裁規則
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="philosophy" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="mb-16 flex flex-col md:flex-row md:items-end justify-between border-b-2 border-gray-100 pb-6">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary title-line-left uppercase tracking-wide">服務宗旨與發展理念</h2>
+                    <p class="mt-3 text-gray-400 font-bold tracking-[0.2em] uppercase text-sm ml-6">Core Philosophy</p>
+                </div>
+                <div class="mt-6 md:mt-0 text-right">
+                    <p class="text-gold font-serif italic text-xl">Friendly · Rigorous · International</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                
+                <div class="bg-gray-50 p-10 sharp-hover group relative overflow-hidden border border-gray-100">
+                    <div class="absolute -right-4 -bottom-4 text-[150px] text-gray-200 opacity-30 group-hover:text-gold/10 transition-colors duration-500 pointer-events-none"><i class="fa-regular fa-handshake"></i></div>
+                    
+                    <div class="w-20 h-20 bg-primary text-gold flex items-center justify-center text-4xl mb-8 border border-gray-300">
+                        <i class="fa-regular fa-handshake"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-1">構建專業友好的仲裁生態</h3>
+                    <h4 class="text-xs font-bold text-accent mb-6 tracking-[0.2em] uppercase">Friendly</h4>
+                    
+                    <p class="text-gray-600 leading-relaxed text-justify text-sm mb-5 relative z-10">
+                        我們遵循《聯合國貿法委示範法》及《香港仲裁條例》（第609章），以當事人和仲裁員為中心，提供清晰的規則指引、友善的服務溝通，致力於營造包容、開放、高效的爭議解決環境。
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-10 sharp-hover group relative overflow-hidden border border-gray-100">
+                    <div class="absolute -right-4 -bottom-4 text-[150px] text-gray-200 opacity-30 group-hover:text-gold/10 transition-colors duration-500 pointer-events-none"><i class="fa-solid fa-scale-balanced"></i></div>
+                    
+                    <div class="w-20 h-20 bg-primary text-gold flex items-center justify-center text-4xl mb-8 border border-gray-300">
+                        <i class="fa-solid fa-gavel"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-1">嚴謹程序，裁決公正</h3>
+                    <h4 class="text-xs font-bold text-accent mb-6 tracking-[0.2em] uppercase">Rigorous</h4>
+                    
+                    <p class="text-gray-600 leading-relaxed text-justify text-sm mb-5 relative z-10">
+                        我們堅守程序公正底線，實行透明的仲裁管理。對裁決書草案進行高標準內部核閱，積極保障當事人權益，促進仲裁裁決根據《紐約公約》在全球法域獲得承認與執行。
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-10 sharp-hover group relative overflow-hidden border border-gray-100">
+                    <div class="absolute -right-4 -bottom-4 text-[150px] text-gray-200 opacity-30 group-hover:text-gold/10 transition-colors duration-500 pointer-events-none"><i class="fa-solid fa-globe"></i></div>
+                    
+                    <div class="w-20 h-20 bg-primary text-gold flex items-center justify-center text-4xl mb-8 border border-gray-300">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-1">國際視野，連接灣區</h3>
+                    <h4 class="text-xs font-bold text-accent mb-6 tracking-[0.2em] uppercase">International</h4>
+                    
+                    <p class="text-gray-600 leading-relaxed text-justify text-sm mb-5 relative z-10">
+                        立足香港，鏈接中國。推行國際和中國內地兩套仲裁規則，深度融合國際仲裁的最佳實踐與大灣區“港資港法港仲裁”特色，為國際當事人和大灣區企業提供專業、創新的跨境爭議解決方案。
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <section id="advantages" class="py-24 bg-primary text-white bg-grid-lines border-t-4 border-b-4 border-gold">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-16">
+                
+                <div class="lg:w-5/12">
+                    <div class="sticky top-32">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 title-line-left leading-tight">
+                            核心優勢<br>
+                            <span class="text-lg text-gold font-normal mt-3 block tracking-[0.2em] uppercase">Why Choose Us</span>
+                        </h2>
+                        <div class="w-16 h-[2px] bg-white/20 mb-8 mt-8 ml-6"></div>
+                        <p class="text-gray-300 leading-relaxed text-justify mb-6 ml-6">
+                            依託香港普通法制度與司法獨立優勢，緊密契合特區政府建設香港成為亞太區國際法律及爭議解決服務中心的政策定位，我們為國際及中國內地當事人提供優質資源和經驗豐富的仲裁員團隊。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lg:w-7/12 flex flex-col mt-8 lg:mt-0">
+                    
+                    <div class="flex gap-6 pb-12 border-b border-white/10 group">
+                        <div class="w-16 h-16 bg-white/5 border border-white/20 flex items-center justify-center text-3xl text-gold group-hover:bg-gold group-hover:text-primary transition-colors flex-shrink-0">
+                            <i class="fa-solid fa-file-contract"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-1 group-hover:text-gold transition-colors">廣泛的執行力</h3>
+                            <h4 class="text-xs font-bold text-accent mb-4 uppercase tracking-[0.15em]">Global Enforceability</h4>
+                            <p class="text-gray-400 text-sm leading-relaxed text-justify">根據《紐約公約》，本院的仲裁裁決在全球170多個司法管轄區獲得承認與執行，為您的跨境商業利益提供堅實的法律保障。</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-6 py-12 border-b border-white/10 group">
+                        <div class="w-16 h-16 bg-white/5 border border-white/20 flex items-center justify-center text-3xl text-gold group-hover:bg-gold group-hover:text-primary transition-colors flex-shrink-0">
+                            <i class="fa-solid fa-bridge"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-1 group-hover:text-gold transition-colors">高效銜接大灣區與涉外爭議</h3>
+                            <h4 class="text-xs font-bold text-accent mb-4 uppercase tracking-[0.15em]">Seamless GBA Services</h4>
+                            <p class="text-gray-400 text-sm leading-relaxed text-justify">我們推行的中國內地仲裁規則高度契合大灣區“港資港法港仲裁”需求，並兼顧中國涉外仲裁案件的特點，提供高效銜接的專業服務。</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-6 pt-12 group">
+                        <div class="w-16 h-16 bg-white/5 border border-white/20 flex items-center justify-center text-3xl text-gold group-hover:bg-gold group-hover:text-primary transition-colors flex-shrink-0">
+                            <i class="fa-solid fa-users-gear"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-1 group-hover:text-gold transition-colors">頂尖專業仲裁員名冊</h3>
+                            <h4 class="text-xs font-bold text-accent mb-4 uppercase tracking-[0.15em]">Top-Tier Expert Roster</h4>
+                            <p class="text-gray-400 text-sm leading-relaxed text-justify">匯聚全球不同專業領域的資深仲裁員，精準匹配專業領域。通過不同國籍仲裁員的選任，最大程度保障當事人的意思自治與公正性。</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="mb-16 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary uppercase tracking-wide">核心爭議解決服務</h2>
+                <div class="w-16 h-[3px] bg-gold mx-auto mt-6 mb-4"></div>
+                <p class="text-gray-400 font-bold tracking-[0.2em] uppercase text-sm">Dispute Resolution Services</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-0 border-2 border-primary bg-light">
+                
+                <div class="p-12 border-b-2 md:border-b-0 md:border-r-2 border-primary hover:bg-white transition-colors relative group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-primary group-hover:bg-gold transition-colors"></div>
+                    <div class="flex items-center gap-6 mb-8">
+                        <div class="w-20 h-20 bg-primary text-gold flex items-center justify-center text-4xl border border-primary">
+                            <i class="fa-solid fa-scale-unbalanced"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-primary mb-1">仲裁服務</h3>
+                            <span class="text-xs font-bold text-gray-500 tracking-[0.15em] uppercase">Arbitration</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed mb-8 text-justify">
+                        為商事合同、跨國貿易、金融投資等領域提供具備法律約束力的國際仲裁服務。程序嚴謹透明，裁決具備廣泛的國際執行力。
+                    </p>
+                    <ul class="space-y-4 text-primary font-medium mb-10">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> 國際與內地雙軌制仲裁規則</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> 嚴格的保密性與程序公正</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> 紐約公約下全球可執行</li>
+                    </ul>
+                </div>
+
+                <div class="p-12 hover:bg-white transition-colors relative group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-accent group-hover:bg-gold transition-colors"></div>
+                    <div class="flex items-center gap-6 mb-8">
+                        <div class="w-20 h-20 bg-accent text-white flex items-center justify-center text-4xl border border-accent">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-primary mb-1">調解服務</h3>
+                            <span class="text-xs font-bold text-gray-500 tracking-[0.15em] uppercase">Mediation</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed mb-8 text-justify">
+                        推崇“以和為貴”的友善理念，提供更具彈性、成本更低、注重維護商業關係的替代性爭議解決方案。調解結果可無縫轉化為仲裁裁決。
+                    </p>
+                    <ul class="space-y-4 text-primary font-medium mb-10">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> 靈活高效，顯著節約時間成本</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> 專家調解員居中斡旋，修復互信</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> 仲裁與調解相結合 (Med-Arb) 模式</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="rules" class="py-24 bg-light border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-white border border-gray-300 p-10 hover:shadow-xl hover:border-primary transition-all group">
+                    <div class="text-5xl text-primary mb-8"><i class="fa-solid fa-book-bookmark"></i></div>
+                    <h3 class="text-2xl font-bold text-primary mb-2">仲裁規則與費用</h3>
+                    <h4 class="text-xs font-bold text-gray-400 tracking-[0.15em] uppercase mb-5">Rules & Fees</h4>
+                    <p class="text-gray-600 text-sm mb-10 leading-relaxed h-16">下載適用於國際及中國內地的最新仲裁規則，獲取透明的仲裁費用表及標準示範條款。</p>
+                    <a href="#" class="inline-block bg-primary text-white px-6 py-3 font-bold text-sm hover:bg-gold transition-colors rounded-none">查閱文件 <i class="fa-solid fa-download ml-2"></i></a>
+                </div>
+
+                <div id="roster" class="bg-white border border-gray-300 p-10 hover:shadow-xl hover:border-primary transition-all group">
+                    <div class="text-5xl text-primary mb-8"><i class="fa-solid fa-users-viewfinder"></i></div>
+                    <h3 class="text-2xl font-bold text-primary mb-2">專業仲裁員名冊</h3>
+                    <h4 class="text-xs font-bold text-gray-400 tracking-[0.15em] uppercase mb-5">Panel of Arbitrators</h4>
+                    <p class="text-gray-600 text-sm mb-10 leading-relaxed h-16">查詢香港、新加坡、中國內地及全球不同專業領域的資深仲裁員和行業專家詳細履歷。</p>
+                    <a href="#" class="inline-block bg-primary text-white px-6 py-3 font-bold text-sm hover:bg-gold transition-colors rounded-none">搜索名冊 <i class="fa-solid fa-magnifying-glass ml-2"></i></a>
+                </div>
+
+                <div id="online" class="bg-primary text-white border border-primary p-10 hover:shadow-xl transition-all group">
+                    <div class="text-5xl text-gold mb-8"><i class="fa-solid fa-laptop-file"></i></div>
+                    <h3 class="text-2xl font-bold text-white mb-2">智慧在線服務</h3>
+                    <h4 class="text-xs font-bold text-gray-400 tracking-[0.15em] uppercase mb-5">E-Filing Services</h4>
+                    <p class="text-gray-300 text-sm mb-10 leading-relaxed h-16">登入在線立案系統，進行案件進度查詢、仲裁費用精確計算及標準文書模板下載。</p>
+                    <a href="#" class="inline-block bg-gold text-primary px-6 py-3 font-bold text-sm hover:bg-white transition-colors rounded-none">登入系統 <i class="fa-solid fa-arrow-right-to-bracket ml-2"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <section id="news" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="mb-16 flex flex-col md:flex-row md:items-end justify-between border-b-2 border-gray-100 pb-6">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary title-line-left uppercase tracking-wide">新聞動態</h2>
+                    <p class="mt-3 text-gray-400 font-bold tracking-[0.2em] uppercase text-sm ml-6">News & Events</p>
+                </div>
+                <div class="mt-6 md:mt-0">
+                    <a href="#" class="text-primary font-bold hover:text-accent transition-colors flex items-center gap-2">查看全部 <i class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
+                <div class="flex gap-6 group cursor-pointer items-start">
+                    <div class="w-20 h-20 bg-light border-2 border-primary flex flex-col items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="text-2xl font-bold leading-none">15</span>
+                        <span class="text-xs font-bold tracking-widest uppercase mt-1">Oct</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-primary mb-3 group-hover:text-accent transition-colors leading-snug">香港國際仲裁院發布2026版最新仲裁規則及費用指引</h3>
+                        <p class="text-gray-600 text-sm line-clamp-2 text-justify">為進一步提升跨境爭議解決效率，本院發布修訂版規則，針對線上聽證及大灣區專屬通道進行了專項優化...</p>
+                        <span class="text-accent text-xs font-bold mt-3 inline-block uppercase tracking-wider">閱讀詳情 ></span>
+                    </div>
+                </div>
+
+                <div class="flex gap-6 group cursor-pointer items-start">
+                    <div class="w-20 h-20 bg-light border-2 border-primary flex flex-col items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="text-2xl font-bold leading-none">02</span>
+                        <span class="text-xs font-bold tracking-widest uppercase mt-1">Sep</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-primary mb-3 group-hover:text-accent transition-colors leading-snug">IAC.HK 與多家國際權威爭議解決機構達成戰略備忘錄</h3>
+                        <p class="text-gray-600 text-sm line-clamp-2 text-justify">旨在深化“一帶一路”沿線國家與地區的法律合作，建立更為緊密的國際仲裁員互認與資源共享機制...</p>
+                        <span class="text-accent text-xs font-bold mt-3 inline-block uppercase tracking-wider">閱讀詳情 ></span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white pt-20 border-t-[6px] border-primary relative overflow-hidden bg-grid-lines">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                
+                <div class="lg:col-span-2 pr-0 lg:pr-12 border-r-0 lg:border-r border-white/10">
+                    <img src="iac-logo.jpg" alt="IAC.HK Logo" class="h-24 w-auto bg-white p-2 mb-6 border-2 border-white/20">
+                    <h3 class="text-2xl font-bold mb-1">香港國際仲裁院有限公司</h3>
+                    <p class="text-gold text-xs font-bold tracking-[0.15em] uppercase mb-6">Hong Kong International Arbitration Court Limited</p>
+                    <p class="text-gray-400 text-sm leading-relaxed text-justify max-w-md">
+                        依托香港普通法優勢，專注為國際當事人和中國內地大灣區企業提供高效、友善、專業、公正的跨境爭議解決服務。
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6 border-l-4 border-gold pl-3">快速導航 <span class="block text-[0.65rem] font-normal text-gray-500 tracking-[0.2em] uppercase mt-1">Quick Links</span></h4>
+                    <ul class="space-y-3 text-gray-400 text-sm font-medium">
+                        <li><a href="#about" class="hover:text-gold transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> 關於我們</a></li>
+                        <li><a href="#services" class="hover:text-gold transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> 仲裁與調解</a></li>
+                        <li><a href="#rules" class="hover:text-gold transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> 仲裁規則下載</a></li>
+                        <li><a href="#roster" class="hover:text-gold transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> 仲裁員名冊</a></li>
+                        <li><a href="#online" class="hover:text-gold transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> 在線立案 (E-Filing)</a></li>
+                    </ul>
+                </div>
+
+                <div id="contact">
+                    <h4 class="text-lg font-bold text-white mb-6 border-l-4 border-gold pl-3">聯繫我們 <span class="block text-[0.65rem] font-normal text-gray-500 tracking-[0.2em] uppercase mt-1">Contact Us</span></h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-location-dot mt-1 text-gold text-lg w-5 text-center"></i>
+                            <span class="leading-relaxed">香港特別行政區<br>（地址信息預留區）</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-phone text-gold text-lg w-5 text-center"></i>
+                            <span class="font-bold tracking-wide text-white">+852 0000 0000</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-envelope text-gold text-lg w-5 text-center"></i>
+                            <span class="font-bold tracking-wide text-white">info@iac.hk</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-gray-500 font-medium tracking-wide">
+                    &copy; 2026 香港國際仲裁院 IAC.HK. 版權所有
+                </p>
+                <div class="flex gap-6 text-sm text-gray-500 font-bold uppercase tracking-wider">
+                    <a href="#" class="hover:text-gold transition-colors">隱私政策</a>
+                    <span class="text-gray-700">|</span>
+                    <a href="#" class="hover:text-gold transition-colors">免責聲明</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            
+            // 開關切換
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                // 切換漢堡圖標狀態
+                const icon = btn.querySelector('i');
+                if(menu.classList.contains('hidden')){
+                    icon.className = 'fa-solid fa-bars-staggered';
+                } else {
+                    icon.className = 'fa-solid fa-xmark';
+                }
+            });
+
+            // 點擊鏈接後關閉菜單
+            const menuLinks = menu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    btn.querySelector('i').className = 'fa-solid fa-bars-staggered';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
